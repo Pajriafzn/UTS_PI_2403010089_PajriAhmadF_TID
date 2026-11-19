@@ -1,0 +1,358 @@
+/* =========================================================
+   1. ROOT VARIABLES & GLOBAL RESET (.pajri_*)
+   ========================================================= */
+:root {
+    --pajri-cream: #FAF6F0;
+    --pajri-beige: #EFE8DD;
+    --pajri-card-bg: #FFFFFF;
+    --pajri-espresso: #1A1715;
+    --pajri-terracotta: #D95D39;
+    --pajri-terracotta-dark: #B84827;
+    --pajri-muted: #5C554F;
+    --pajri-border: rgba(26, 23, 21, 0.09);
+    --pajri-font-serif: 'Fraunces', serif;
+    --pajri-font-sans: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.pajri_body {
+    font-family: var(--pajri-font-sans);
+    background-color: var(--pajri-cream);
+    color: var(--pajri-espresso);
+    line-height: 1.65;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.pajri_main {
+    flex: 1;
+}
+
+/* =========================================================
+   2. NAVBAR 7 HALAMAN & EFEK SCROLL FROSTED BUBBLE
+   ========================================================= */
+.pajri_navbar {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 1000;
+    padding: 18px 5%;
+    background-color: rgba(250, 246, 240, 0.94);
+    border-bottom: 1px solid var(--pajri-border);
+    transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Aktif otomatis saat halaman di-scroll ke bawah */
+.pajri_navbar.pajri_nav_bubble {
+    top: 16px;
+    width: 92%;
+    max-width: 1140px;
+    padding: 10px 26px;
+    border-radius: 999px;
+    /* Bubble transparan + background blur kaca buram */
+    background-color: rgba(250, 246, 240, 0.68);
+    backdrop-filter: blur(18px) saturate(160%);
+    -webkit-backdrop-filter: blur(18px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    box-shadow: 0 12px 32px rgba(26, 23, 21, 0.14);
+}
+
+.pajri_nav_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pajri_brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--pajri-espresso);
+}
+
+.pajri_logo_img {
+    height: 36px;
+    width: 36px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1.5px solid var(--pajri-espresso);
+}
+
+.pajri_brand_text {
+    font-family: var(--pajri-font-serif);
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: 0.6px;
+    color: var(--pajri-espresso);
+}
+
+.pajri_menu_list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 6px;
+}
+
+.pajri_menu_link {
+    text-decoration: none;
+    color: var(--pajri-espresso);
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 8px 15px;
+    border-radius: 999px;
+    transition: all 0.25s ease;
+    /* Menjaga teks tetap kontras & terbaca jelas di atas bubble transparan */
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.85);
+}
+
+.pajri_menu_link:hover,
+.pajri_menu_link.pajri_active {
+    background-color: var(--pajri-espresso);
+    color: var(--pajri-cream);
+    text-shadow: none;
+}
+
+.pajri_btn_contact {
+    background-color: var(--pajri-terracotta);
+    color: #FFFFFF;
+    text-shadow: none;
+}
+
+.pajri_btn_contact:hover,
+.pajri_btn_contact.pajri_active {
+    background-color: var(--pajri-terracotta-dark);
+    color: #FFFFFF;
+}
+
+/* =========================================================
+   3. TIPOGRAFI & TOMBOL GLOBAL
+   ========================================================= */
+.pajri_container {
+    width: 90%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.pajri_subtitle {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+    color: var(--pajri-terracotta);
+    margin-bottom: 12px;
+}
+
+.pajri_heading_lg {
+    font-family: var(--pajri-font-serif);
+    font-size: clamp(2rem, 4.2vw, 3.1rem);
+    font-weight: 700;
+    line-height: 1.18;
+    max-width: 760px;
+    margin: 0 auto 18px;
+    color: var(--pajri-espresso);
+}
+
+.pajri_heading_md {
+    font-family: var(--pajri-font-serif);
+    font-size: clamp(1.65rem, 3vw, 2.35rem);
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--pajri-espresso);
+}
+
+.pajri_text_muted {
+    color: var(--pajri-muted);
+    font-size: 1rem;
+    max-width: 640px;
+    margin: 0 auto 30px;
+}
+
+.pajri_cta_group {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.pajri_btn_primary,
+.pajri_btn_outline {
+    display: inline-block;
+    padding: 13px 28px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-family: var(--pajri-font-sans);
+    font-weight: 600;
+    font-size: 0.94rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    border: 1.5px solid var(--pajri-espresso);
+}
+
+.pajri_btn_primary {
+    background-color: var(--pajri-espresso);
+    color: var(--pajri-cream);
+}
+
+.pajri_btn_primary:hover {
+    background-color: var(--pajri-terracotta);
+    border-color: var(--pajri-terracotta);
+    transform: translateY(-2px);
+}
+
+.pajri_btn_outline {
+    background-color: transparent;
+    color: var(--pajri-espresso);
+}
+
+.pajri_btn_outline:hover {
+    background-color: var(--pajri-espresso);
+    color: var(--pajri-cream);
+    transform: translateY(-2px);
+}
+
+.pajri_btn_full {
+    width: 100%;
+    text-align: center;
+}
+
+/* =========================================================
+   4. FOOTER
+   ========================================================= */
+.pajri_footer {
+    background-color: var(--pajri-espresso);
+    color: var(--pajri-cream);
+    padding: 64px 0 26px;
+    margin-top: auto;
+}
+
+.pajri_footer_grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 44px;
+}
+
+.pajri_footer_title {
+    font-family: var(--pajri-font-serif);
+    font-size: 1.55rem;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.pajri_footer_desc {
+    color: #B5ADA5;
+    font-size: 0.92rem;
+    max-width: 320px;
+}
+
+.pajri_footer_heading {
+    font-size: 0.98rem;
+    font-weight: 700;
+    margin-bottom: 14px;
+    color: #FFFFFF;
+}
+
+.pajri_footer_links {
+    list-style: none;
+}
+
+.pajri_footer_links li {
+    margin-bottom: 9px;
+}
+
+.pajri_footer_links a {
+    color: #B5ADA5;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.pajri_footer_links a:hover {
+    color: var(--pajri-terracotta);
+}
+
+.pajri_footer_bottom {
+    text-align: center;
+    padding-top: 22px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    font-size: 0.85rem;
+    color: #9A9189;
+}
+
+/* =========================================================
+   5. RESPONSIVE MOBILE (NILAI TAMBAH SOAL UTS)
+   ========================================================= */
+.pajri_hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.pajri_hamburger span {
+    width: 24px;
+    height: 2.5px;
+    background-color: var(--pajri-espresso);
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+@media (max-width: 920px) {
+    .pajri_hamburger {
+        display: flex;
+    }
+
+    .pajri_menu_wrapper {
+        display: none;
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 0;
+        width: 100%;
+        background-color: rgba(250, 246, 240, 0.95);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        border-radius: 24px;
+        padding: 20px;
+        box-shadow: 0 18px 36px rgba(26, 23, 21, 0.16);
+    }
+
+    .pajri_menu_wrapper.pajri_menu_open {
+        display: block;
+    }
+
+    .pajri_menu_list {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+
+    .pajri_menu_link {
+        display: block;
+        text-align: center;
+        padding: 10px 16px;
+    }
+
+    .pajri_footer_grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+}

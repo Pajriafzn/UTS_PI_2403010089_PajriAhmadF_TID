@@ -1,0 +1,241 @@
+/* =========================================================
+   SCENE BAR KOPI INTERAKTIF ALA TUKU (.pajri_*)
+   ========================================================= */
+   .pajri_hero_bar {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 80px);
+    min-height: 560px;
+    max-height: 780px;
+    margin-top: 80px;
+    background-color: #DCD4C8;
+    overflow: hidden;
+    user-select: none;
+}
+
+.pajri_bar_hint {
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    pointer-events: none;
+    width: 90%;
+    text-align: center;
+}
+
+.pajri_hint_badge {
+    display: inline-block;
+    background-color: rgba(26, 23, 21, 0.78);
+    color: #FAF6F0;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 8px 20px;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Layer 1: Dinding Belakang & Papan Menu */
+.pajri_layer_wall {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    z-index: 1;
+}
+
+/* Layer 2: Barista Wanita */
+.pajri_barista_container {
+    position: absolute;
+    bottom: 7.2vw;
+    left: 48%;
+    transform: translateX(-50%);
+    height: 27vw;
+    min-height: 270px;
+    max-height: 390px;
+    display: flex;
+    align-items: flex-end;
+    z-index: 2;
+    pointer-events: none;
+    will-change: transform;
+}
+
+.pajri_barista_character {
+    height: 100%;
+    width: auto;
+    filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.18));
+    transition: transform 0.2s ease;
+}
+
+/* Layer 3: Meja Bar & Mesin Espresso */
+.pajri_layer_counter {
+    position: absolute;
+    bottom: -10.5vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    min-width: 1080px;
+    height: auto;
+    z-index: 3;
+    pointer-events: none;
+}
+
+/* =========================================================
+   LAYER 4: ZONA OBJEK INTERAKTIF (SKETCH OUTLINE + PANAH POP-UP)
+   ========================================================= */
+.pajri_object_zone {
+    position: absolute;
+    z-index: 6;
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Bingkai garis putih ala coretan marker saat objek disentuh */
+.pajri_sketch_box {
+    position: absolute;
+    inset: 0;
+    border: 3.5px solid #FFFFFF;
+    /* Sudut sedikit asimetris agar terlihat seperti gambar tangan */
+    border-radius: 6px 14px 8px 12px / 12px 6px 14px 8px;
+    background-color: rgba(255, 255, 255, 0.08);
+    box-shadow:
+        0 0 0 1.5px rgba(26, 23, 21, 0.25),
+        0 10px 24px rgba(0, 0, 0, 0.28),
+        inset 0 0 14px rgba(255, 255, 255, 0.2);
+    opacity: 0;
+    transform: scale(0.96);
+    transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Pop-up Label Tulisan Tangan + Panah Melengkung */
+.pajri_callout {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    pointer-events: auto;
+    opacity: 0;
+    transform: translateY(8px) scale(0.9);
+    transition: opacity 0.28s ease, transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+    filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.65));
+    z-index: 10;
+}
+
+.pajri_callout_text {
+    font-family: 'Caveat', cursive;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 1.5px;
+    color: #FFFFFF;
+    white-space: nowrap;
+    transform: rotate(-3deg);
+    background-color: rgba(26, 23, 21, 0.68);
+    padding: 4px 12px;
+    border-radius: 999px;
+    border: 1.5px solid rgba(255, 255, 255, 0.55);
+}
+
+.pajri_curved_arrow {
+    width: 54px;
+    height: 38px;
+    margin-top: 2px;
+}
+
+/* Variasi Arah Muncul Pop-up agar tidak terpotong tepi layar */
+.pajri_callout_right {
+    top: 8%;
+    left: calc(100% + 10px);
+    align-items: flex-start;
+}
+
+.pajri_callout_left {
+    top: 8%;
+    right: calc(100% + 10px);
+    align-items: flex-end;
+}
+
+.pajri_callout_top {
+    bottom: calc(100% + 6px);
+    left: 50%;
+    transform: translateX(-50%) translateY(8px) scale(0.9);
+}
+
+.pajri_callout_bottom {
+    top: calc(100% + 6px);
+    left: 50%;
+    transform: translateX(-50%) translateY(-8px) scale(0.9);
+}
+
+/* State Aktif saat Kursor Menyentuh (Hover) atau di-Tap di HP */
+.pajri_object_zone:hover .pajri_sketch_box,
+.pajri_object_zone.pajri_zone_active .pajri_sketch_box {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.pajri_object_zone:hover .pajri_callout,
+.pajri_object_zone.pajri_zone_active .pajri_callout {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.pajri_object_zone:hover .pajri_callout_top,
+.pajri_object_zone.pajri_zone_active .pajri_callout_top,
+.pajri_object_zone:hover .pajri_callout_bottom,
+.pajri_object_zone.pajri_zone_active .pajri_callout_bottom {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+}
+
+.pajri_object_zone:hover .pajri_callout_text {
+    background-color: var(--pajri-terracotta);
+    border-color: #FFFFFF;
+}
+
+/* Penyesuaian layar HP & Tablet */
+@media (max-width: 1080px) {
+    .pajri_barista_container {
+        bottom: 78px;
+        height: 290px;
+    }
+
+    .pajri_layer_counter {
+        bottom: -112px;
+    }
+}
+
+@media (max-width: 768px) {
+    .pajri_hero_bar {
+        height: 70vh;
+        min-height: 440px;
+        margin-top: 74px;
+    }
+
+    .pajri_barista_container {
+        bottom: 56px;
+        height: 225px;
+        min-height: 225px;
+    }
+
+    .pajri_layer_counter {
+        bottom: -78px;
+        min-width: 760px;
+    }
+
+    .pajri_callout_text {
+        font-size: 1.45rem;
+        padding: 3px 10px;
+    }
+
+    .pajri_curved_arrow {
+        width: 40px;
+        height: 28px;
+    }
+}

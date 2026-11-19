@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Kopi & Jiwa Toast — Kopi Janji Jiwa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body class="pajri_body">
+
+    <header id="pajri_header" class="pajri_navbar">
+        <div class="pajri_nav_container">
+            <a href="index.html" class="pajri_brand">
+                <img src="assets/images/logo/logo.png" alt="Logo Janji Jiwa" class="pajri_logo_img">
+                <span class="pajri_brand_text">JANJI JIWA</span>
+            </a>
+
+            <button id="pajri_mobile_btn" class="pajri_hamburger" aria-label="Buka Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="pajri_nav_menu" class="pajri_menu_wrapper">
+                <ul class="pajri_menu_list">
+                    <li><a href="index.html" class="pajri_menu_link">Home</a></li>
+                    <li><a href="menu.html" class="pajri_menu_link pajri_active">Menu</a></li>
+                    <li><a href="promo.html" class="pajri_menu_link">Promo</a></li>
+                    <li><a href="outlet.html" class="pajri_menu_link">Outlet</a></li>
+                    <li><a href="galeri.html" class="pajri_menu_link">Galeri</a></li>
+                    <li><a href="tentang.html" class="pajri_menu_link">Tentang</a></li>
+                    <li><a href="contact.html" class="pajri_menu_link pajri_btn_contact">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pajri_main">
+        <!-- PAGE HERO -->
+        <section class="pajri_page_hero">
+            <div class="pajri_container">
+                <span class="pajri_subtitle">FRESH-TO-CUP & WARM TOAST</span>
+                <h1 class="pajri_heading_lg">Menu Minuman & Jiwa Toast</h1>
+                <p class="pajri_text_muted">Temukan pasangan terbaikmu: seduhan biji kopi pilihan nusantara dan roti panggang lembut yang dibuat hangat saat dipesan.</p>
+
+                <!-- TOMBOL FILTER KATEGORI MAKANAN & MINUMAN -->
+                <div class="pajri_filter_group" id="pajri_menu_filters">
+                    <button class="pajri_filter_btn pajri_filter_active" data-filter="all">Semua Menu</button>
+                    <button class="pajri_filter_btn" data-filter="coffee">Signature Coffee</button>
+                    <button class="pajri_filter_btn" data-filter="non-coffee">Non-Coffee & Tea</button>
+                    <button class="pajri_filter_btn" data-filter="toast">Jiwa Toast</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- KATALOG GABUNGAN MINUMAN & MAKANAN -->
+        <section id="pajri_katalog_section" class="pajri_section_pad">
+            <div class="pajri_container">
+                <div class="pajri_grid_3" id="pajri_menu_grid">
+                    
+                    <!-- KATEGORI: COFFEE -->
+                    <article class="pajri_card pajri_filter_item" data-category="coffee">
+                        <div class="pajri_card_badge">Signature</div>
+                        <img src="assets/images/produk/kopi-susu-sahabat.jpg" alt="Es Kopi Susu Sahabat" class="pajri_card_img">
+                        <div class="pajri_card_body">
+                            <span class="pajri_tag">Coffee</span>
+                            <h3 class="pajri_card_title">Es Kopi Susu Sahabat</h3>
+                            <p class="pajri_card_desc">Espresso house blend dengan susu segar dan gula aren lokal yang seimbang.</p>
+                            <div class="pajri_card_footer">
+                                <span class="pajri_price">Rp 18.000</span>
+                                <span class="pajri_size_info">Regular / Large</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="pajri_card pajri_filter_item" data-category="coffee">
+                        <div class="pajri_card_badge">Creamy</div>
+                        <img src="assets/images/produk/es-kopi-pokat.jpg" alt="Es Kopi Pokat" class="pajri_card_img">
+                        <div class="pajri_card_body">
+                            <span class="pajri_tag">Coffee</span>
+                            <h3 class="pajri_card_title">Es Kopi Pokat</h3>
+                            <p class="pajri_card_desc">Perpaduan jus alpukat kental, espresso robusta-arabika, dan es krim cokelat.</p>
+                            <div class="pajri_card_footer">
+                                <span class="pajri_price">Rp 25.000</span>
+                                <span class="pajri_size_info">Regular</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="pajri_card pajri_filter_item" data-category="coffee">
+                        <img src="assets/images/produk/soy-coffee-latte.jpg" alt="Soy Coffee Latte" class="pajri_card_img">
+                        <div class="pajri_card_body">
+                            <span class="pajri_tag">Coffee</span>
+                            <h3 class="pajri_card_title">Soy Coffee Latte</h3>
+                            <p class="pajri_card_desc">Alternatif ramah laktosa dengan susu kedelai lembut dan double shot espresso.</p>
+                            <div class="pajri_card_footer">
+                                <span class="pajri_price">Rp 22.000</span>
+                                <span class="pajri_size_info">Regular / Large</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- KATEGORI: NON-COFFEE & TEA -->
+                    <article class="pajri_card pajri_filter_item" data-category="non-coffee">
+                        <div class="pajri_card_badge">Favorit</div>
+                        <img src="assets/images/produk/es-soklat.jpg" alt="Es Soklat" class="pajri_card_img">
+                        <div class="pajri_card_body">
+                            <span class="pajri_tag">Non-Coffee</span>
+                            <h3 class="pajri_card_title">Es Soklat</h3>
+                            <p class="pajri_card_desc">Cokelat klasik pekat khas Indonesia yang dipadukan dengan susu segar dingin.</p>
+                            <div class="pajri_card_footer">
+                                <span class="pajri_price">Rp 18.000</span>
+                                <span class="pajri_size_info">Regular / Large</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="pajri_card pajri_filter_item" data-category="non-coffee">
+                        <div class="pajri_card_badge">Aromatic</div>
+                        <img src="assets/images/produk/earl-grey-milk-tea.jpg" alt="Earl Grey Milk Tea" class="pajri_card_img">
+                        <div class="pajri_card_body">
+                            <span class="pajri_tag">Tea Series</span>
+                            <h3 class="pajri_card_title">Earl Grey Milk Tea</h3>
+                            <p class="pajri_card_desc">Seduhan daun teh hitam bergamot aromatik dengan campuran susu creamy.</p>
+                            <div class="pajri_card_footer">
+                                <span class="pajri_price">Rp 20.000</span>
+                                <span class="pajri_size_info">Regular / Large</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- KATEGORI: JIWA TOAST (MAKANAN) -->
+                    <article class="pajri_card pajri_filter_item" data-category="toast">
+                        <div class="pajri_card_badge">Best Toast</div>
+                        <img src="assets/images/produk/toast-crispy-chicken.jpg" alt="Crispy Chicken Mentai" class="pajri_card_img">
+                        <div class="pajri_card_body">
+                            <span class="pajri_tag">Jiwa Toast</span>
+                            <h3 class="pajri_card_title">Crispy Chicken Mentai</h3>
+                            <p class="pajri_card_desc">Fillet ayam goreng renyah, scrambled egg lembut, kol segar, dan saus mentai panggang.</p>
+                            <div class="pajri_card_footer">
+                                <span class="pajri_price">Rp 26.000</span>
+                                <span class="pajri_size_info">± 420 kkal</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="pajri_card pajri_filter_item" data-category="toast">
+                        <img src="assets/images/produk/toast-egg-cheese.jpg" alt="Egg & Cheese Toast" class="pajri_card_img">
+                        <div class="pajri_card_body">
+                            <span class="pajri_tag">Jiwa Toast</span>
+                            <h3 class="pajri_card_title">Egg & Cheese Toast</h3>
+                            <p class="pajri_card_desc">Telur orak-arik creamy dengan lelehan keju cheddar dan saus rahasia Jiwa Toast.</p>
+                            <div class="pajri_card_footer">
+                                <span class="pajri_price">Rp 20.000</span>
+                                <span class="pajri_size_info">± 340 kkal</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="pajri_card pajri_filter_item" data-category="toast">
+                        <div class="pajri_card_badge">Premium</div>
+                        <img src="assets/images/produk/toast-beef-truffle.jpg" alt="Beef Truffle Mayo" class="pajri_card_img">
+                        <div class="pajri_card_body">
+                            <span class="pajri_tag">Jiwa Toast</span>
+                            <h3 class="pajri_card_title">Beef Truffle Mayo</h3>
+                            <p class="pajri_card_desc">Irisan daging sapi asap berpadu telur lembut, bawang karamel, dan truffle mayo.</p>
+                            <div class="pajri_card_footer">
+                                <span class="pajri_price">Rp 29.000</span>
+                                <span class="pajri_size_info">± 460 kkal</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="pajri_card pajri_filter_item" data-category="toast">
+                        <div class="pajri_card_badge">Sweet Toast</div>
+                        <img src="assets/images/produk/toast-choco-crunchy.jpg" alt="Choco Crunchy Toast" class="pajri_card_img">
+                        <div class="pajri_card_body">
+                            <span class="pajri_tag">Jiwa Toast</span>
+                            <h3 class="pajri_card_title">Choco Crunchy Toast</h3>
+                            <p class="pajri_card_desc">Olesan selai cokelat malt renyah melimpah di atas roti panggang mentega hangat.</p>
+                            <div class="pajri_card_footer">
+                                <span class="pajri_price">Rp 19.000</span>
+                                <span class="pajri_size_info">± 380 kkal</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="pajri_footer" class="pajri_footer">
+        <div class="pajri_container pajri_footer_grid">
+            <div>
+                <h3 class="pajri_footer_title">JANJI JIWA</h3>
+                <p class="pajri_footer_desc">Kopi dari hati untuk menemani setiap langkah, tugas kuliah, dan ceritamu.</p>
+            </div>
+            <div>
+                <h4 class="pajri_footer_heading">Jelajahi</h4>
+                <ul class="pajri_footer_links">
+                    <li><a href="menu.html">Menu Kopi & Toast</a></li>
+                    <li><a href="promo.html">Promo & Voucher</a></li>
+                    <li><a href="galeri.html">Galeri Sejiwa</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="pajri_footer_heading">Informasi</h4>
+                <ul class="pajri_footer_links">
+                    <li><a href="outlet.html">Lokasi Outlet</a></li>
+                    <li><a href="tentang.html">Tentang Kami</a></li>
+                    <li><a href="contact.html">Jiwa Care (Kontak)</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="pajri_footer_bottom">
+            <p>&copy; 2026 Kopi Janji Jiwa — Project UTS Pemrograman Web by Pajri.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

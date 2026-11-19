@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kopi Janji Jiwa — Kopi Dari Hati</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/hero-bar.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body class="pajri_body">
+
+    <!-- NAVBAR 7 HALAMAN (BERUBAH MENJADI BUBBLE BLUR SAAT SCROLL) -->
+    <header id="pajri_header" class="pajri_navbar">
+        <div class="pajri_nav_container">
+            <a href="index.html" class="pajri_brand">
+                <img src="assets/images/logo/logo.png" alt="Logo Janji Jiwa" class="pajri_logo_img">
+                <span class="pajri_brand_text">JANJI JIWA</span>
+            </a>
+
+            <button id="pajri_mobile_btn" class="pajri_hamburger" aria-label="Buka Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="pajri_nav_menu" class="pajri_menu_wrapper">
+                <ul class="pajri_menu_list">
+                    <li><a href="index.html" class="pajri_menu_link pajri_active">Home</a></li>
+                    <li><a href="menu.html" class="pajri_menu_link">Menu</a></li>
+                    <li><a href="promo.html" class="pajri_menu_link">Promo</a></li>
+                    <li><a href="outlet.html" class="pajri_menu_link">Outlet</a></li>
+                    <li><a href="galeri.html" class="pajri_menu_link">Galeri</a></li>
+                    <li><a href="tentang.html" class="pajri_menu_link">Tentang</a></li>
+                    <li><a href="contact.html" class="pajri_menu_link pajri_btn_contact">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pajri_main">
+        <!-- HERO SECTION: COFFEE BAR INTERAKTIF ALA TUKU -->
+        <section id="pajri_bar_scene" class="pajri_hero_bar">
+            <div class="pajri_bar_hint">
+                <span class="pajri_hint_badge">✨ Arahkan kursor atau sentuh benda di kedai untuk menjelajah</span>
+            </div>
+
+            <!-- Layer 1: Dinding Belakang -->
+            <img src="assets/images/bar-scene/wall-cafe.jpg" alt="Interior Kedai Janji Jiwa" class="pajri_layer_wall">
+
+            <!-- Layer 2: Barista Wanita Mengikuti Kursor -->
+            <div id="pajri_barista_track" class="pajri_barista_container">
+                <img src="assets/images/bar-scene/barista-wanita.png" alt="Barista Janji Jiwa" id="pajri_barista_img" class="pajri_barista_character">
+            </div>
+
+            <!-- Layer 3: Meja Bar & Mesin Espresso -->
+            <img src="assets/images/bar-scene/meja-bar.png" alt="Meja Bar Kopi" class="pajri_layer_counter">
+
+            <!-- Layer 4: Zona Interaktif Benda di Kedai (Muncul Outline & Panah saat Disentuh) -->
+
+            <!-- 1. Papan Menu Tengah -> menu.html -->
+            <a href="menu.html" class="pajri_object_zone" style="top: 20.5%; left: 37%; width: 27.5%; height: 32%;">
+                <span class="pajri_sketch_box"></span>
+                <span class="pajri_callout pajri_callout_right">
+                    <span class="pajri_callout_text">MENU</span>
+                    <svg class="pajri_curved_arrow" viewBox="0 0 60 40" fill="none">
+                        <path d="M54 8 C 44 26, 26 30, 6 24" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M14 17 L 5 24 L 14 31" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+            </a>
+
+            <!-- 2. Etalase Jiwa Toast -> menu.html -->
+            <a href="menu.html#pajri_katalog_section" class="pajri_object_zone" style="top: 41.5%; left: 10.2%; width: 18.5%; height: 21.5%;">
+                <span class="pajri_sketch_box"></span>
+                <span class="pajri_callout pajri_callout_top">
+                    <span class="pajri_callout_text">JIWA TOAST</span>
+                    <svg class="pajri_curved_arrow" viewBox="0 0 50 45" fill="none">
+                        <path d="M14 6 C 28 14, 30 28, 22 40" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M15 32 L 22 41 L 30 34" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+            </a>
+
+            <!-- 3. Mesin Espresso Janji Jiwa -> promo.html -->
+            <a href="promo.html" class="pajri_object_zone" style="top: 41%; left: 64.5%; width: 17.5%; height: 22.5%;">
+                <span class="pajri_sketch_box"></span>
+                <span class="pajri_callout pajri_callout_left">
+                    <span class="pajri_callout_text">PROMO</span>
+                    <svg class="pajri_curved_arrow" viewBox="0 0 60 40" fill="none">
+                        <path d="M6 8 C 16 26, 34 30, 54 24" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M46 17 L 55 24 L 46 31" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+            </a>
+
+            <!-- 4. Papan Gantung Kiri (PESAN DI SINI) -> tentang.html -->
+            <a href="tentang.html" class="pajri_object_zone" style="top: 21.5%; left: 10%; width: 11.2%; height: 14.5%;">
+                <span class="pajri_sketch_box"></span>
+                <span class="pajri_callout pajri_callout_right">
+                    <span class="pajri_callout_text">CERITA</span>
+                    <svg class="pajri_curved_arrow" viewBox="0 0 60 40" fill="none">
+                        <path d="M54 8 C 44 26, 26 30, 6 24" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M14 17 L 5 24 L 14 31" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+            </a>
+
+            <!-- 5. Papan Gantung Kanan (AMBIL DI SINI) -> outlet.html -->
+            <a href="outlet.html" class="pajri_object_zone" style="top: 21.5%; left: 79.5%; width: 11.2%; height: 14.5%;">
+                <span class="pajri_sketch_box"></span>
+                <span class="pajri_callout pajri_callout_left">
+                    <span class="pajri_callout_text">OUTLET</span>
+                    <svg class="pajri_curved_arrow" viewBox="0 0 60 40" fill="none">
+                        <path d="M6 8 C 16 26, 34 30, 54 24" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M46 17 L 55 24 L 46 31" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+            </a>
+
+            <!-- 6. Rak Stoples & Biji Kopi -> galeri.html -->
+            <a href="galeri.html" class="pajri_object_zone" style="top: 23.5%; left: 67%; width: 11.5%; height: 14%;">
+                <span class="pajri_sketch_box"></span>
+                <span class="pajri_callout pajri_callout_bottom">
+                    <svg class="pajri_curved_arrow" viewBox="0 0 50 45" fill="none">
+                        <path d="M26 40 C 16 26, 18 14, 28 6" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M20 7 L 29 5 L 31 14" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="pajri_callout_text">GALERI</span>
+                </span>
+            </a>
+
+            <!-- 7. Tablet Kasir -> contact.html -->
+            <a href="contact.html" class="pajri_object_zone" style="top: 50.5%; left: 33.8%; width: 7.5%; height: 12.5%;">
+                <span class="pajri_sketch_box"></span>
+                <span class="pajri_callout pajri_callout_top">
+                    <span class="pajri_callout_text">JIWA CARE</span>
+                    <svg class="pajri_curved_arrow" viewBox="0 0 50 45" fill="none">
+                        <path d="M14 6 C 28 14, 30 28, 22 40" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M15 32 L 22 41 L 30 34" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+            </a>
+        </section>
+
+        <!-- SECTION PENGANTAR -->
+        <section class="pajri_intro_section">
+            <div class="pajri_container">
+                <span class="pajri_subtitle">KOPI DARI HATI UNTUK TEMAN SEJIWA</span>
+                <h1 class="pajri_heading_lg">Racikan Biji Kopi Nusantara & Toast Hangat Setiap Hari</h1>
+                <p class="pajri_text_muted">
+                    Mengusung konsep <em>fresh-to-cup</em> dengan cita rasa klasik yang ramah di kantong mahasiswa dan anak muda. Arahkan kursor ke benda di bar kopi di atas atau pilih menu favoritmu di bawah ini.
+                </p>
+                <div class="pajri_cta_group">
+                    <a href="menu.html" class="pajri_btn_primary">Lihat Menu Lengkap</a>
+                    <a href="outlet.html" class="pajri_btn_outline">Cari Gerai Terdekat</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION FAVORIT TEMAN SEJIWA -->
+        <section class="pajri_home_featured">
+            <div class="pajri_container">
+                <div class="pajri_section_head">
+                    <span class="pajri_subtitle">BEST SELLER</span>
+                    <h2 class="pajri_heading_md">Favorit Teman Sejiwa Minggu Ini</h2>
+                </div>
+
+                <div class="pajri_grid_3">
+                    <article class="pajri_card">
+                        <div class="pajri_card_badge">Terlaris #1</div>
+                        <img src="assets/images/produk/kopi-susu-sahabat.jpg" alt="Es Kopi Susu Sahabat" class="pajri_card_img">
+                        <div class="pajri_card_body">
+                            <h3 class="pajri_card_title">Es Kopi Susu Sahabat</h3>
+                            <p class="pajri_card_desc">Perpaduan espresso house blend dengan susu segar dan gula aren organik khas nusantara.</p>
+                            <div class="pajri_card_footer">
+                                <span class="pajri_price">Rp 18.000</span>
+                                <a href="menu.html" class="pajri_link_arrow">Lihat Menu &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="pajri_card">
+                        <div class="pajri_card_badge">Favorit Toast</div>
+                        <img src="assets/images/produk/toast-crispy-chicken.jpg" alt="Crispy Chicken Mentai" class="pajri_card_img">
+                        <div class="pajri_card_body">
+                            <h3 class="pajri_card_title">Crispy Chicken Mentai</h3>
+                            <p class="pajri_card_desc">Roti panggang lembut dengan ayam renyah, telur dadar tebal, dan saus mentai gurih.</p>
+                            <div class="pajri_card_footer">
+                                <span class="pajri_price">Rp 26.000</span>
+                                <a href="menu.html" class="pajri_link_arrow">Lihat Menu &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="pajri_card">
+                        <div class="pajri_card_badge">Non-Coffee</div>
+                        <img src="assets/images/produk/earl-grey-milk-tea.jpg" alt="Earl Grey Milk Tea" class="pajri_card_img">
+                        <div class="pajri_card_body">
+                            <h3 class="pajri_card_title">Earl Grey Milk Tea</h3>
+                            <p class="pajri_card_desc">Teh hitam aroma bergamot yang diseduh segar bersama susu creamy nan menenangkan.</p>
+                            <div class="pajri_card_footer">
+                                <span class="pajri_price">Rp 20.000</span>
+                                <a href="menu.html" class="pajri_link_arrow">Lihat Menu &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="pajri_footer" class="pajri_footer">
+        <div class="pajri_container pajri_footer_grid">
+            <div>
+                <h3 class="pajri_footer_title">JANJI JIWA</h3>
+                <p class="pajri_footer_desc">Kopi dari hati untuk menemani setiap langkah, tugas kuliah, dan ceritamu.</p>
+            </div>
+            <div>
+                <h4 class="pajri_footer_heading">Jelajahi</h4>
+                <ul class="pajri_footer_links">
+                    <li><a href="menu.html">Menu Kopi & Toast</a></li>
+                    <li><a href="promo.html">Promo & Voucher</a></li>
+                    <li><a href="galeri.html">Galeri Sejiwa</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="pajri_footer_heading">Informasi</h4>
+                <ul class="pajri_footer_links">
+                    <li><a href="outlet.html">Lokasi Outlet</a></li>
+                    <li><a href="tentang.html">Tentang Kami</a></li>
+                    <li><a href="contact.html">Jiwa Care (Kontak)</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="pajri_footer_bottom">
+            <p>&copy; 2026 Kopi Janji Jiwa — Project UTS Pemrograman Web by Pajri.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/barista.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
